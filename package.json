@@ -13,6 +13,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "materialize-css": "^1.0.0-rc.2",
+    "serve-favicon": "^2.5.0",
     "vue": "^2.5.11",
     "webpack-cli": "^3.3.0"
   },

@@ -1,33 +1,22 @@
 <template>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Z-Algorithm Visualised</title>
-  </head>
-  	<body>
-    	<main>
-        <div class="container">
-			<h3 class="title">Z-Algorithm Visualised</h3>
-			<hr>
-			<div v-html="text">{{text}}</div>
-					
-				<pattern-bar v-if="startState" :listPat='listPat' :pattern='pattern' :patLen='patLen' :zBoxPos='zBoxPos' :zVals='zVals'></pattern-bar>
+  <body>
+    <main>
+      <div class="container">
+    <h3 class="title">Z-Algorithm Visualised</h3>
+    <hr>
+    <div v-html="text">{{text}}</div>
+        
+      <pattern-bar v-if="startState" :listPat='listPat' :pattern='pattern' :patLen='patLen' :zBoxPos='zBoxPos' :zVals='zVals'></pattern-bar>
 
-			<transition name="fade">
-				<information-bar v-if="startState" :i="i" :pattern="pattern" :returnValues="returnValues" @leftClicked="left()" @rightClicked="right()"></information-bar>
-			</transition>
-			<hr>
-			<app-input :pattern="pattern" :startState="startState" @setStartState="start()" @patternChanged="pattern = $event"></app-input>
-		</div>
-    	</main>
-	<app-footer></app-footer>
-	</body>
-  </html>
-
+    <transition name="fade">
+      <information-bar v-if="startState" :i="i" :pattern="pattern" :returnValues="returnValues" @leftClicked="left()" @rightClicked="right()"></information-bar>
+    </transition>
+    <hr>
+    <app-input :pattern="pattern" :startState="startState" @setStartState="start()" @patternChanged="pattern = $event"></app-input>
+  </div>
+    </main>
+<app-footer></app-footer>
+</body>
 </template>
 
 <script>
@@ -112,11 +101,11 @@ main {
 
 p {
   vertical-align: middle;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 h6{
-		font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 table {
@@ -130,7 +119,7 @@ tr{
 
 td{
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .title {
@@ -169,7 +158,7 @@ td{
 }
 
 [type=text]{
-  font-size: 1.2em !important;
+  font-size: 1em !important;
 }
 
 /* label underline focus color */
