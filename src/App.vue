@@ -1,5 +1,14 @@
 <template>
-	<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Z-Algorithm Visualised</title>
+  </head>
+  	<body>
     	<main>
         <div class="container">
 			<h3 class="title">Z-Algorithm Visualised</h3>
@@ -16,8 +25,9 @@
 		</div>
     	</main>
 	<app-footer></app-footer>
-	<link rel="stylesheet" href="../node_modules/material-icons/iconfont/material-icons.css">
 	</body>
+  </html>
+
 </template>
 
 <script>
