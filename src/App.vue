@@ -1,22 +1,25 @@
 <template>
-  <body>
+  <div>
     <main>
-      <div class="container">
-    <h3 class="title">Z-Algorithm Visualised</h3>
-    <hr>
-    <div v-html="text">{{text}}</div>
-        
-      <pattern-bar v-if="startState" :listPat='listPat' :pattern='pattern' :patLen='patLen' :zBoxPos='zBoxPos' :zVals='zVals'></pattern-bar>
+		<div class="container">
+			<h3 class="title">Z-Algorithm Visualised</h3>
+			<hr>
+			<div v-html="text">{{text}}</div>
+			
+			<transition name="fade">
+				<pattern-bar v-if="startState" :listPat='listPat' :pattern='pattern' :patLen='patLen' :zBoxPos='zBoxPos' :zVals='zVals'></pattern-bar>
+			</transition>
 
-    <transition name="fade">
-      <information-bar v-if="startState" :i="i" :pattern="pattern" :returnValues="returnValues" @leftClicked="left()" @rightClicked="right()"></information-bar>
-    </transition>
-    <hr>
-    <app-input :pattern="pattern" :startState="startState" @setStartState="start()" @patternChanged="pattern = $event"></app-input>
-  </div>
+			<transition name="fade">
+				<information-bar v-if="startState" :i="i" :pattern="pattern" :returnValues="returnValues" @leftClicked="left()" @rightClicked="right()"></information-bar>
+			</transition>
+			
+			<hr>
+			<app-input :pattern="pattern" :startState="startState" @setStartState="start()" @patternChanged="pattern = $event"></app-input>
+		</div>
     </main>
-<app-footer></app-footer>
-</body>
+	<app-footer></app-footer>
+</div>
 </template>
 
 <script>

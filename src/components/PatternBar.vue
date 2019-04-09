@@ -1,5 +1,5 @@
 <template>
-	<div name="fade">
+	<div>
 		<div class="row">
 			<hr>
 			<div class="col s1" style="margin-top: 50px">
