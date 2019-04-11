@@ -16,7 +16,7 @@ The algorithm works with the idea of a sliding window. Whenever a new substring 
 Concretely, at any index `i` at run-time, we know the right-most position `r` found of any substring starting from any of `[1..i-1]` matching the prefix. Building on this, we define Z-boxes as 2 pointers on the string which denote a substring `[l..r]`, where `l` is the corresponding left index to `r`. In other words, Z-box `txt[l..r]`, matches the prefix `txt[0..Z[r-l]]`
 
 ### Case 1: `i > r`
-If the `i` extends past the known Z-box, we have no previous Z-values corresponding to `i` so we perform a linear search.
+If `i` extends past the known Z-box, we have no previous Z-values corresponding to `i` so we perform a linear search.
 
 ![alt text](./screenshots/case1.png "Logo Title Text 1")
 
