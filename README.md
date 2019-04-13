@@ -5,6 +5,17 @@ I built this application as a first step towards understanding web technologies 
 
 The Python implementation of this algorithm may be found [here](https://github.com/asherLZR/adv-ds-alg).
 
+## Building
+```
+git clone https://github.com/asherLZR/z-algorithm-visualised/
+cd z-algorithm-visualised
+npm install
+
+# Build and run server
+npm run build
+npm run start
+```
+
 ## The Algorithm
 Gusfield's Z-algorithm is a linear run-time algorithm that produces z[i] values, the length of the longest possible substring pat[i..i+z[i]-1] that matches the prefix, pat[0..z[i]-1]. It may be used for pattern matching. By prepending the pattern to the start of the text delimited by an unused character, we may traverse the resultant array for any z[i] values == length of pattern. Note that z[0] is obviously uninteresting, so we ignore its computation. 
 
