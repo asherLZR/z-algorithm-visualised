@@ -160,6 +160,7 @@ td{
   margin-left: 0%;
 }
 
+
 [type=text]{
   font-size: 1em !important;
 }
