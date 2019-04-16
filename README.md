@@ -3,8 +3,6 @@
 ## About this App
 I built this application as a first step towards understanding web technologies and the process from design to production. The idea to make a visualisation for this algorithm came from this [Suffix Tree Visualisation](http://brenden.github.io/ukkonen-animation/) of Ukkonen's algorithm. I'm excited by the sheer deviousness of some algorithms and am intrigued by the idea that we can still find ways to teach and learn them better. This project was a happy marriage of all of these things 😄
 
-The Python implementation of this algorithm may be found [here](https://github.com/asherLZR/adv-ds-alg).
-
 ## Building
 ```
 git clone https://github.com/asherLZR/z-algorithm-visualised/
