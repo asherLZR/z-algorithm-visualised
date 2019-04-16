@@ -27,9 +27,8 @@
 					</div>
 					<template v-if="zBoxPos.leftPad < zBoxPos.boxLength">
 						<div class="patternbar bar front absolute" style="background-color:rgb(41, 41, 41);height:25px;z-index:1;"
-						:style="{width: zBoxPos.boxLength + '%'}">
+						:style="{width: zBoxPos.boxLength + '%'}"></div>
 					</template>
-					</div>
 					<table class="boxTable absolute striped" style="z-index:2;"><tr><td v-for="(char, index) in listPat" :key="index">{{char}}</td></tr></table>
 				</div>
 			</div>
