@@ -20,7 +20,7 @@ Gusfield's Z-algorithm is a linear run-time algorithm that produces z[i] values,
 The Z-algorithm is also used as a pre-processing step on the pattern as input to KMP and Boyer-Moore.
 
 ## Conceptual Understanding
-The algorithm works with the idea of a sliding window. Whenever a new substring matching a prefix is found, we have more information to use at the next iteration so we avoid unnecessary comparisons.
+The algorithm works by storing past values of longest matched prefix sizes and using those values to compute subsequent iterations. Whenever a new substring matching a prefix is found, we have more information to use at the next iteration so we avoid unnecessary comparisons.
 
 Concretely, at any index `i` at run-time, we know the right-most position `r` found of any substring starting from any of `[1..i-1]` matching the prefix. Building on this, we define Z-boxes as 2 pointers on the string which denote a substring `[l..r]`, where `l` is the corresponding left index to `r`. In other words, Z-box `txt[l..r]`, matches the prefix `txt[0..Z[r-l]]`
 
