@@ -9,7 +9,7 @@ git clone https://github.com/asherLZR/z-algorithm-visualised/
 cd z-algorithm-visualised
 npm install
 
-# Build and run server
+// Build and run server
 npm run build
 npm run start
 ```
@@ -40,13 +40,11 @@ The corresponding Z-box starting at `i-l` extends no further than the length fro
 ![alt text](./screenshots/case2a.png "Logo Title Text 1")
 
 ### Case 2b: `i <= r and Z[i-l] > (r-i) + 1`
-Here, we draw up the following definitions:
+Let `X` be the next character after the Z-box, `txt[r+1]` and `Y` be its corresponding character in the prefix, `txt[r-l]`. We will show that `X != Y`.
 
-> `X == txt[r+1]`  
-> `Y == txt[r-l+1]`  
-> `Z == txt[Z[i-l] + 1]`
-
-Since `Z != Y != X`, there is no greater `Z[i]` than `r-i+1`.
+- Since `Z[i-l] > (r-i + 1)`, `Y` must also appear in the prefix at some `Z`, `txt[(r-l)-(i-l+1)]`. 
+- However if `X` were equal to `Z`, the Z-box from `l` would have included `Z`.
+- Therefore `X != Y`. Consequently, there is no greater `Z[i]` than `r-i+1`.
 
 ![alt text](./screenshots/case2b.png "Logo Title Text 1")
 
