@@ -40,11 +40,15 @@ The corresponding Z-box starting at `i-l` extends no further than the length fro
 ![alt text](./screenshots/case2a.png "Logo Title Text 1")
 
 ### Case 2b: `i <= r and Z[i-l] > (r-i) + 1`
-Let `X` be the next character after the Z-box, `txt[r+1]` and `Y` be its corresponding character in the prefix, `txt[r-l]`. We will show that `X != Y`.
+`X`: the next character after the current Z-box, `txt[r+1]`.
 
-- Since `Z[i-l] > (r-i + 1)`, `Y` must also appear in the prefix at some `Z`, `txt[(r-l)-(i-l+1)]`. 
-- However if `X` were equal to `Z`, the Z-box from `l` would have included `Z`.
-- Therefore `X != Y`. Consequently, there is no greater `Z[i]` than `r-i+1`.
+`Y`: the next character after the prefix of `txt` corresponding to the current Z-box, `txt[r-l+1]`.
+
+`Z`: the character in the prefix of `txt` corresponding to `Y`, `txt[r-i+1]`.
+
+- `X != Y` as the Z-box starting at `l` would have extended further otherwise.
+- `Y  = Z` as `Z[i-l] > (r-i) + 1`.
+- Therefore, `X != Z`, and there is no larger `Z[i]` than `r-i+1`.
 
 ![alt text](./screenshots/case2b.png "Logo Title Text 1")
 
